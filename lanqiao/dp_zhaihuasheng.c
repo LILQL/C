@@ -20,13 +20,14 @@ int main(){
                 scanf("%d",&w[i][j]);
             }
         }
-
+        int res;
         for(int i=1;i<=n;i++){
             for(int j=1;j<=m;j++){
                 f[i][j]=max(f[i-1][j]+w[i][j],f[i][j-1]+w[i][j]);
+                res=f[i][j];
             }
         }
-        printf("%d",f[i][j]);
+        printf("%d",res);
         
     }
 
